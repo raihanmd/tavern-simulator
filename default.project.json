@@ -1,0 +1,68 @@
+{
+  "name": "tavern-simulator",
+  "tree": {
+    "$className": "DataModel",
+    "Lighting": {
+      "$properties": {
+        "Brightness": 2.0,
+        "GlobalShadows": true,
+        "Ambient": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Outlines": false,
+        "Technology": "Voxel"
+      }
+    },
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/shared"
+      }
+    },
+    "ServerScriptService": {
+      "Server": {
+        "$path": "src/server"
+      }
+    },
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+    "Workspace": {
+      "Baseplate": {
+        "$className": "Part",
+        "$properties": {
+          "Locked": true,
+          "Anchored": true,
+          "Color": [
+            0.38823,
+            0.37254,
+            0.38823
+          ],
+          "Position": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "Size": [
+            512.0,
+            20.0,
+            512.0
+          ]
+        }
+      },
+      "$properties": {
+        "FilteringEnabled": true
+      }
+    }
+  }
+}
