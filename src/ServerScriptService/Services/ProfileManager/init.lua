@@ -1,14 +1,11 @@
-local ServerScriptService = game:GetService('ServerScriptService')
-local ReplicatedStorage = game:GetService('ReplicatedStorage')
-local Players = game:GetService('Players')
-local RunService = game:GetService('RunService')
+local ServerScriptService = game:GetService("ServerScriptService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
 
 local ProfileService = require(ServerScriptService.Modules.ProfileService)
 local ProfileTemplate = require(script.ProfileTemplate)
-local ProfileStore = ProfileService.GetProfileStore(
-	'PlayerData',
-	ProfileTemplate
-)
+local ProfileStore = ProfileService.GetProfileStore("PlayerData", ProfileTemplate)
 
 local module = {}
 
@@ -31,7 +28,7 @@ local function LoadPlayerInstances(player, profile)
 end
 
 local function PlayerAdded(player: Player)
-	local profile = ProfileStore:LoadProfileAsync('Player_' .. player.UserId)
+	local profile = ProfileStore:LoadProfileAsync("Player_" .. player.UserId)
 	if profile then
 		profile:AddUserId(player.UserId)
 		profile:Reconcile()
@@ -39,9 +36,7 @@ local function PlayerAdded(player: Player)
 			module.Profiles[player] = nil
 			player:Kick()
 		end)
-		
-		print(player)
-		
+
 		if player:IsDescendantOf(Players) == true then
 			module.Profiles[player] = profile
 			LoadPlayerInstances(player, profile)
