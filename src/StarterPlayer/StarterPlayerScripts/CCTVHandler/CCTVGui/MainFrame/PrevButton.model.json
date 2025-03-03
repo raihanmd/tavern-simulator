@@ -1,0 +1,22 @@
+{
+  "className": "TextButton",
+  "properties": {
+    "AnchorPoint": [0, 1],
+    "Position": {
+      "UDim2": [
+        [0, 0],
+        [1, 0]
+      ]
+    },
+    "Size": {
+      "UDim2": [
+        [0, 200],
+        [0, 50]
+      ]
+    },
+    "Text": "Prev",
+    "BackgroundColor3": {
+      "Color3": [255, 255, 255]
+    }
+  }
+}

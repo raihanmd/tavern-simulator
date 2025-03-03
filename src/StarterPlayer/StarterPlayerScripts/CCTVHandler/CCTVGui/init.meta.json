@@ -1,0 +1,8 @@
+{
+  "name": "CCTVGui",
+  "className": "ScreenGui",
+  "properties": {
+    "Name": "CCTVGui"
+  },
+  "ignoreUnknownInstances": true
+}

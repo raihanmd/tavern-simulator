@@ -4,6 +4,8 @@ local CCTVProximity = workspace:WaitForChild("Computer"):WaitForChild("Proximity
 
 local camera = workspace.CurrentCamera
 
+local CCTVGui = script.CCTVGui
+
 CCTVProximity.Triggered:Connect(function(palyer: Player)
 	local cctv = CollectionService:GetTagged("CCTV_Prototype")
 
